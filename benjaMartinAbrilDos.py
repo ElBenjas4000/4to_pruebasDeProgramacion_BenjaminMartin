@@ -53,7 +53,7 @@ while True:
         CantidadTareas(cantidad_de_tareas)
         print("¿Qué numero de tarea quiere borrar?")
         tarea_para_eliminar = int(input(">> "))
-        cantidad_de_tareas.remove(tarea_para_eliminar - 1)
+        cantidad_de_tareas.pop(tarea_para_eliminar - 1)
         while True:
             try:
                 volver = int(input("Ingrese 1 para volver:  "))
