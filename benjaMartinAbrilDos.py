@@ -22,14 +22,14 @@ while True:
     print(f"2. Ver todas las Tareas (en total son {len(cantidad_de_tareas)})")
     print("3. Marcar una tarea como completa")
     print("4. Salir")
-
+    print()
+    
     while True:
         try:
             accion = int(input("Ingrese el numero de lo que quiere hacer:  "))
             break
         except:
             print("Tiene que ingresar un numero")
-
     
     if accion == 1:
         print("Que tarea desea agregar")
