@@ -7,11 +7,17 @@ print("""
     Calcular presupuestos de viaje
 """)
 
-presupuesto = float(input("Cual es tu presupuesto inicial del viaje: $"))
-total_gastado = float(input("Cuanto gastaste hasta ahora: $"))
-numero_dias = int(input("\nCuantos dias dura el viaje: "))
-numero_dias_transcurrido = int(input("Cuantos dias llevas de viaje: "))
-
+while True:
+    try:
+        presupuesto = float(input("Cual es tu presupuesto inicial del viaje: $"))
+        total_gastado = float(input("Cuanto gastaste hasta ahora: $"))
+        numero_dias = int(input("\nCuantos dias dura el viaje: "))
+        numero_dias_transcurrido = int(input("Cuantos dias llevas de viaje: "))
+        break
+    except ValueError:
+        print("Ingreso un dato no valido")
+        clear()
+         
 gasto_promedio = lambda tg, nd: tg / nd
 balance_diario = lambda p, gp, ndt: p - (gp * ndt)
 
