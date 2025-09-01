@@ -31,13 +31,24 @@ def draw_shield_bar(surface, x, y, porcentage, color):
 	pygame.draw.rect(surface, color, fill)
 	pygame.draw.rect(surface, white, border, 2)
 
+def show_chus_player():
+	screen.blit(background [0, 0])
+	draw_text(screen, "SHOOTER 2v2", 65, width // 2, height // 5)
+	draw_text(screen, "Elige tu jugador", 27, width // 2, height // 2)
+	draw_text(screen, "Presiona Enter", 20, width // 2, height * 3/4)
+
+	while waiting:
+		clock.tick(60)
+		for event in pygame.event.get():
+			if event.type == pygame.QUIT:
+				pygame.quit()
+			if event.type == pygame.KEYDOWN:
+				if event.key == pygame.K_RETURN:
+					waiting = False
 def show_go_screen():
 	screen.blit(background, [0, 0])
-	draw_text(screen, "SHOOTER 2v2", 65, width // 2, height // 4)
-	draw_text(screen, """
-						Para moverte preciona las teclas w, a, s, d
-						y espacio para disparar
-					  """, 27, width // 2, height // 2)
+	draw_text(screen, "SHOOTER 2v2", 65, width // 2, height // 2)
+	draw_text(screen, "Para moverte preciona las teclas w, a, s, d y espacio para disparar", 27, width // 2, height // 2)
 	draw_text(screen, "Presiona Enter", 20, width // 2, height * 3/4)
 	pygame.display.flip()
 	waiting = True 
@@ -91,7 +102,7 @@ while running:
 
 
 	if comenzar:
-		show_go_screen()
+		show_chus_player()
 		comenzar = False
 		all_sprites = pygame.sprite.Group()
 		bullets = pygame.sprite.Group()
